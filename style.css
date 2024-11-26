@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    
+}
+
+::-webkit-scrollbar {
+    display: none;
+    }
+
+@font-face {
+    font-family: 'Relieve'; 
+    src: url('./assets/fonts/Relieve.ttf') format('truetype'); 
+}
+
+body {
+    background-color: #13a8df;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    overflow: hidden;
+    
+}
+
+.fondo {
+    z-index: -1;
+    position: absolute;
+    max-width: 100%;
+}
+
+
+.texto {
+    font-size: 96px;
+    font-family: 'Relieve';
+    color: #082f49;
+    text-align: center;
+    filter: drop-shadow(5px 5px 2px #00000046);
+}
+
+.tamales {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tamalabierto {
+    width: 324px;
+    height: 199px;
+    display: none;
+    filter: drop-shadow(30px 10px 4px #00000046);
+}
+
+.tamal {
+    filter: drop-shadow(30px 10px 4px #00000046);
+}
+
+.tamalabierto12 {
+    display: block;
+}
+
+.mondongo {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 8.58%;
+    transform: translateX(-50%);
+    top: -400px;
+    z-index: 50;
+}
+
+.mondongoactivo {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 8.58%;
+    transform: translateX(-50%);
+    top: -400px;
+    animation: slide 1s cubic-bezier(0.3, 0, 0.1, 0);
+    z-index: 50;
+}
+
+.gatohola {
+    height: 300px;
+    width: 370px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -400px;
+    z-index: 50;
+}
+.gatoholaactivo {
+    height: 300px;
+    width: 370px;
+    position: absolute;
+    left: 42%;
+    transform: translateX(-50%);
+    top: -400px;
+    animation: slide 2s cubic-bezier(0.3, 0, 0.1, 0);
+    z-index: 50;
+}
+
+.palabras {
+    text-align: justify;
+    font-family: 'Rakkas';
+    max-width: 60%;
+    position: absolute;
+    left: 20%;
+    font-size: 26px;
+    display: none;
+    background-color: #083344;
+    padding: 20px;
+    border-radius: 25px;
+    bottom: -800px;
+    transform: translateX(50%);
+    color: #13a8df;
+}
+
+.palabrasactivo {
+    text-align: justify;
+    font-family: 'Rakkas';
+    max-width: 60%;
+    position: absolute;
+    left: 20%;
+    font-size: 26px;
+    background-color: #083344;
+    padding: 20px;
+    border-radius: 25px;
+    bottom: -800px;
+    display: block;
+    animation: slide2 4s forwards;
+    transform: translateX(50%);
+}
+
+@keyframes slide {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide2 {
+    0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-850px);
+      }
+    }
+
+    @keyframes slide3 {
+        0% {
+            transform: translateY(-850px);
+          }
+          100% {
+            transform: translateY(900px);
+        }
+    }
+
+    .besito {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 102%;
+        max-width: 80%;
+    }
+  
+    .equis {
+        max-width: 3%;
+        position: absolute;
+        left: 97.5%;
+        bottom: 97%
+    }
+
+    .equiscerrar {
+        max-width: 3%;
+        position: absolute;
+        left: 97.5%;
+        bottom: 97%;
+        animation: slide3 3s forwards;
+    }
+
+
+    .cerrar {
+        text-align: justify;
+    font-family: 'Rakkas';
+    max-width: 60%;
+    position: absolute;
+    left: 20%;
+    font-size: 26px;
+    background-color: #083344;
+    padding: 20px;
+    border-radius: 25px;
+    bottom: -800px;
+    display: block;
+    animation: slide3 3s forwards;
+    transform: translateX(50%);
+    }
